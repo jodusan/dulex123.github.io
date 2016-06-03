@@ -1,40 +1,23 @@
-name: sudo:engineer
-description: Computer Science Magic
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+# My variables
+name: Dušan Josipović
+description: Experimental engineering and life.
+google_verification: null
 
-aboutPage: true
 
+# File management
+include: [".htaccess"]
+exclude: ["README.md", "LICENSE"]
+
+
+# Sass
+sass:
+  style: :compressed
+  sass_dir: _sass
+
+
+# Markdown
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 highlighter: rouge
-
-baseurl: /
-domain_name: 'http://sudo.engineer'
-google_analytics: 'UA-XXXXXXXX-X'
-disqus: false
-disqus_shortname: 'your-disqus-shortname'
-
-# Details for the RSS feed generator
-url:            'http://your-blog-url.example.com'
-author:         'Dušan Josipović'
-
-permalink:       /:year/:title/
-
-defaults:
-    -
-        scope:
-            path: "" # empty string for all files
-            type: pages
-        values:
-            layout: default
-    -
-        scope:
-            path: "" # empty string for all files
-            type: posts
-        values:
-            layout: post
-    -
-        scope:
-            path: ""
-            type: drafts
-        values:
-            layout: post
