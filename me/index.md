@@ -2,8 +2,9 @@
 layout: about
 ---
 
-Hello, my name is Dušan Josipović. And Whatnot.
+Hi there, my name is Dušan Josipović. This website is dedicated to my software experiments and in itself is an experiment.
+
 
 # What do you do?
-I make website and stuff. All the code I write is on my [Github](https://github.com/dulex123).
+Mostly, I write code. Some of it is on [Github](https://github.com/dulex123).
 
