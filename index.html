@@ -7,21 +7,31 @@ layout: default
 <div class="portfolio">
     <h1>Posts:</h1>
     <ul>
-        {% for websites in site.data.websites %}
+        <!-- {% for websites in site.data.websites %}
         <li>
             <a href="{{ websites.url }}">{{ websites.url }}</a>
+        </li>
+        {% endfor %} -->
+    </ul>
+</div>
+
+<div class="blog">
+    <h1>Experiments:</h1>
+    <ul>
+        {% for experiment in site.categories.experiments %}
+        <li>
+            <span class="date">{{ experiment.date | date: '%Y %b %d' }}</span> - <a href="{{ experiment.url }}">{{ experiment.title }}</a>
         </li>
         {% endfor %}
     </ul>
 </div>
 
-
 <div class="blog">
-    <h1>Experiments:</h1>
+    <h1>Schemes:</h1>
     <ul>
-        {% for post in site.posts %}
+        {% for post in site.categories.schemes %}
         <li>
-            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
         {% endfor %}
     </ul>
