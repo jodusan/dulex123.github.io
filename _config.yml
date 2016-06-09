@@ -1,6 +1,6 @@
 # My variables
 name: Dušan Josipović
-description: Experimental engineering and life.
+description: Experimental software engineering.
 google_verification: null
 
 
@@ -21,3 +21,9 @@ kramdown:
   input: GFM
   hard_wrap: false
 highlighter: rouge
+
+# Analytics
+analytics:
+    provider: google
+    google:
+        tracking_id:UA-79008158-1
