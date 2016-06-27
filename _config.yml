@@ -21,9 +21,3 @@ kramdown:
   input: GFM
   hard_wrap: false
 highlighter: rouge
-
-# Analytics
-analytics:
-    provider: google
-    google:
-        tracking_id:UA-79008158-1

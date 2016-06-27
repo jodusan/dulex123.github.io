@@ -16,10 +16,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 168.0,
-		"last_filter": "install",
+		"height": 84.0,
+		"last_filter": "beautify",
 		"selected_items":
 		[
+			[
+				"beautify",
+				"HTMLBeautify"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -59,6 +63,12 @@
 	},
 	"file_history":
 	[
+		"/home/dusan/Desktop/Lab/sudo-engineer/404.html",
+		"/home/dusan/Desktop/Lab/sudo-engineer/_config.yml",
+		"/home/dusan/Desktop/Lab/sudo-engineer/_posts/2016-06-08-Scripts-for-competitive-flow.md",
+		"/home/dusan/Desktop/Lab/sudo-engineer/_layouts/default.html",
+		"/home/dusan/Desktop/Lab/sudo-engineer/me/index.md",
+		"/home/dusan/Desktop/Lab/sudo-engineer/_layouts/about.html",
 		"/home/dusan/Desktop/Lab/sudo-engineer/Sudo engineer.sublime-project",
 		"/home/dusan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/dusan/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
@@ -213,8 +223,28 @@
 		"selected_items":
 		[
 			[
+				"404",
+				"404.html"
+			],
+			[
+				"config",
+				"_config.yml"
+			],
+			[
+				"post",
+				"_posts/2016-06-08-Scripts-for-competitive-flow.md"
+			],
+			[
 				"me",
 				"me/index.md"
+			],
+			[
+				"abu",
+				"_layouts/about.html"
+			],
+			[
+				"posts",
+				"_posts/2016-06-08-Scripts-for-competitive-flow.md"
 			],
 			[
 				"about",
