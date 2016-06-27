@@ -15,8 +15,8 @@ So after a few hours of tweaking I have made this pair of scripts that will allo
 
 
 
-# Update: 
-
+# Update:
+ 
 After using competitive flow for a few rounds, I've got some new ideas that would be worth developing for even faster coding. 
 
 Features:
