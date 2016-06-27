@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scripts for CompetitiveFlow
+title: CompetitiveFlow
 category: schemes
 ---
 
