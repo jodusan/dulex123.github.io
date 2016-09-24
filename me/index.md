@@ -4,7 +4,7 @@ layout: about
 
 # Hi!  
 
-My name is Dušan Josipović. I am a machine learning enthusiast and I have been [studying](/2016/Machine-Learning-Circles) the subject of Deep Learning for the past few months.
+My name is Dušan Josipović. I am a machine learning enthusiast and I have been [studying](/2016/machine-learning-immersion) the subject of Deep Learning for the past few months.
 
 You can find some of my code on [github](https://github.com/dulex123).
 
