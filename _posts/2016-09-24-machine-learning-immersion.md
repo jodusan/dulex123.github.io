@@ -18,7 +18,7 @@ The easiest way to pick up the speed is to surround yourself with people that ar
 
 # Online courses
 [Coursera, Machine Learning](https://www.coursera.org/learn/machine-learning)  
-Taught by fantastic Andrew Ng, this course provides a very nice introduction to the field of machine learning. You build all models yourself in Matlab/Octave. Especially useful is the course wiki that you are introduced to in Week 1.
+Taught by fantastic Andrew Ng, this course provides a very nice introduction to the field of machine learning. You build all models yourself in Matlab/Octave. Especially useful is the course wiki that you are introduced to in Week 1. Highly recommended.
 
 [Stanford, Convolutional Neural Networks for Visual Recognition](http://academictorrents.com/details/46c5af9e2075d9af06f280b55b65cf9b44eb9fe7)  
 Building upon what you learned previously, this course from January 2016 really gets you in the high gear where you delve deep into the nuts and bolts of CNNs, implementing networks every step of the way. There are also [awesome notes and assignments](http://cs231n.github.io/) on the GitHub page of the course. Probably the best online course I have ever taken.
