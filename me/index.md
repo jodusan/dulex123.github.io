@@ -2,13 +2,18 @@
 layout: about
 ---
 
-Hi there, my name is Dušan Josipović. These web pages are dedicated to my software experiments and are in itself an experiment.
+# Hi!  
 
-- Experiments: Something new I am building with little previous experience
-- Schemes: Short and simple helper apps
+My name is Dušan Josipović. I am a machine learning enthusiast and I have been [studying](/2016/Machine-Learning-Circles) the subject of Deep Learning for the past few months.
 
+You can find some of my code on [github](https://github.com/dulex123).
 
-# What do you do?
-Mostly, I write code. Some of it is on [Github](https://github.com/dulex123).
+I often post ML related stuff on [twitter](https://twitter.com/josipovicd).
 
+-
 
+There are three categories of posts here:
+
+- **Experiments**: Something I am building with little previous experience
+- **Schemes**: Short and simple helper apps  
+- **Posts**: Regular posts mostly about machine learning stuff

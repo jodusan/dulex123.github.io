@@ -4,7 +4,6 @@ title: CompetitiveFlow
 category: schemes
 ---
 
-
 # Insane habit of copy-pasting tests
 
 If you have done any competitive programming on codeforces you may have noticed that in those intense moments when the clock is ticking away and some new insight into problem strikes you, you start copy-pasting test problems into terminal. And if you do it for a few times it becomes an insane habit that can ruin your train of thought that may lead to a solution.
@@ -16,8 +15,8 @@ So after a few hours of tweaking I have made this pair of scripts that will allo
 
 
 # Update:
- 
-After using competitive flow for a few rounds, I've got some new ideas that would be worth developing for even faster coding. 
+
+After using competitive flow for a few rounds, I've got some new ideas that would be worth developing for even faster coding.
 
 Features:
 

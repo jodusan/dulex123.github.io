@@ -3,6 +3,8 @@ name: Dušan Josipović
 description: Experimental software engineering.
 google_verification: null
 
+post_dirs: false
+permalink: /:year/:title
 
 # File management
 include: [".htaccess"]
