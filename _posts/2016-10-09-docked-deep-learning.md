@@ -44,8 +44,8 @@ Questions I forgot to ask myself while I did this:
 [Docker][docker] is this fantastic tool that efficiently allows you to isolate
 your dev environments from the host machine(s).
 
-I have started using it just a few days ago, so I am no expert but I already
-see many benefits.
+I have started using it just a few days ago to install **all major DL frameworks at
+once**, so I am no expert but I already see many benefits.
 
 Docker terminology:  
 
@@ -63,11 +63,11 @@ Docker terminology:
 
 
 Having clear idea of the concepts above, following through this
-[awesome README][readme] you'll get it up and running in no time.
+[awesome README][readme] you'll get Tensorflow-Caffe-Theano-Keras-Lasagne-Torch-enabled
+machine up and running in no time.
 
 You may also find useful this [beautiful cheatsheet][cheatsheet] that has many
 useful docker commands which can help your docker-fu.
-
 
 
 [docker]: https://www.docker.com/
