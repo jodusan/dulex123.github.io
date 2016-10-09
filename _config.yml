@@ -1,6 +1,7 @@
 # My variables
 name: Dušan Josipović
 description: Experimental software engineering.
+google_analytics: UA-79008158-1
 google_verification: null
 
 post_dirs: false
@@ -23,6 +24,3 @@ kramdown:
   input: GFM
   hard_wrap: false
 highlighter: rouge
-
-gems:
-  - jekyll-feed
