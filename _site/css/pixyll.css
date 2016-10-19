@@ -615,8 +615,7 @@ MIT License http://opensource.org/licenses/MIT
 */
 html, body {
   height: auto;
-  min-height: 100%;
-  zoom: 90%; }
+  min-height: 100%; }
 
 img {
   max-width: 100%; }

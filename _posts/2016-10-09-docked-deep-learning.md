@@ -2,7 +2,7 @@
 layout: post
 title: Starting with deep learning frameworks
 category: posts
-summary: How not to setup frameworks. 
+summary: How not to setup frameworks.
 ---
 
 ***Notice: This 3min post can potentially save you ~14hrs of wasted time,
@@ -73,5 +73,5 @@ useful docker commands which can help your docker-fu.
 
 [docker]: https://www.docker.com/
 [cheatsheet]: https://github.com/wsargent/docker-cheat-sheet/blob/master/README.md
-[ml-immersion]: /2016/machine-learning-immersion
+[ml-immersion]: /posts/2016/09/24/machine-learning-immersion/
 [readme]: https://github.com/saiprashanths/dl-docker
