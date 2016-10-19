@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Starting with DL frameworks
+title: Starting with deep learning frameworks
 category: posts
+summary: How not to setup frameworks. 
 ---
 
 ***Notice: This 3min post can potentially save you ~14hrs of wasted time,

@@ -2,6 +2,7 @@
 layout: post
 title: Machine learning immersion
 category: posts
+summary: First serious steps towards deep learning.
 ---
 
 *This page will be updated as I absorb more stuff.*  

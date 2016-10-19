@@ -9,7 +9,7 @@
     
         
             <item>
-                <title>Starting with DL frameworks</title>
+                <title>Starting with deep learning frameworks</title>
                 <link>http://sudo.engineer/posts/2016/10/09/docked-deep-learning/</link>
                 <content:encoded>
                     <![CDATA[
@@ -84,6 +84,8 @@ useful docker commands which can help your docker-fu.</p>
                 <guid isPermaLink="false">/posts/2016/10/09/docked-deep-learning/</guid>
                 <description>
                     
+                    How not to setup frameworks.
+                    
                 </description>
                 <pubDate>Sun, 09 Oct 2016 00:00:00 +0200</pubDate>
                 <author>Душан Јосиповић</author>
@@ -131,6 +133,8 @@ Awesome places to further explore hot topics, meet people, sharpen your skills a
                 <guid isPermaLink="false">/posts/2016/09/24/machine-learning-immersion/</guid>
                 <description>
                     
+                    First serious steps towards deep learning.
+                    
                 </description>
                 <pubDate>Sat, 24 Sep 2016 00:00:00 +0200</pubDate>
                 <author>Душан Јосиповић</author>
@@ -176,6 +180,8 @@ Awesome places to further explore hot topics, meet people, sharpen your skills a
                 </content:encoded>
                 <guid isPermaLink="false">/schemes/2016/06/08/Scripts-for-competitive-flow/</guid>
                 <description>
+                    
+                    Scripts for CodeForces competitive programming platform.
                     
                 </description>
                 <pubDate>Wed, 08 Jun 2016 00:00:00 +0200</pubDate>

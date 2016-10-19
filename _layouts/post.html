@@ -2,14 +2,14 @@
 layout: default
 ---
 
-{% assign minutes = content | strip_html | number_of_words | divided_by: 180 %}
+{% assign minutes = content | strip_html | number_of_words | divided_by: 150 %}
 {% if minutes == 0 %}
 {% assign minutes = 1 %}
 {% endif %}
 
 <div class="post-header mb2">
   <h1>{{ page.title }}</h1>
-  <span class="post-meta">{{ page.date | date: site.date_format }}</span><br>
+  <span class="post-meta">{{ page.date | date: site.date_format }}</span> / <span>{{page.category}}</span><br>
   {% if page.update_date %}
     <span class="post-meta">{{ site.text.post.updated }}: {{ page.update_date | date: site.date_format }}</span><br>
   {% endif %}

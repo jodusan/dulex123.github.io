@@ -8,6 +8,7 @@ url:         "http://sudo.engineer"
 date_format: "%b %-d, %Y"
 
 # Google services
+google_analytics: UA-79008158-1
 google_verification:
 # Use either direct GA implementation or set up GTM account
 # - using both will skew your data (leave blank to not use at all)
@@ -94,12 +95,12 @@ text:
     email:    'Email Address'
     content:  'What would you like to say?'
     subject:  'New submission!'
-    submit:   'Say Hello'
+    submit:   'Send'
     ajax:
       sending:  'sending..'
       sent:     'Message sent!'
       error:    'Error!'
-  thanks: 'Thanks for contacting us. We will reply as soon as possible.'
+  thanks: 'Thanks for sending a message. I will reply as soon as possible. Probably within 6-12hrs.'
   og_locale: 'en_US'
 
 # Build settings

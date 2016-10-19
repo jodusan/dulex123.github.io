@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CompetitiveFlow
+summary: Scripts for CodeForces competitive programming platform.
 category: schemes
 ---
 
