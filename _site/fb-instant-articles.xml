@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title></title>
+    <link>http://sudo.engineer</link>
+    <description>
+      Experimental software engineering.
+    </description>
+    
+        
+            <item>
+                <title>Starting with DL frameworks</title>
+                <link>http://sudo.engineer/posts/2016/10/09/docked-deep-learning/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <p><strong><em>Notice: This 3min post can potentially save you ~14hrs of wasted time,
+depending on your level of knowledge.</em></strong></p>
+
+<hr />
+
+<p><em>Dear Diary,<br />
+I have lost around <strong>16 working hours</strong> on trying to set up caffe deep
+learning framework on Ubuntu 16.04. I am currently on the 9th level of
+dependency hell, and there is no light at the end of the tunnel. There is
+no tunnel either. Because you have held broken packages.</em></p>
+
+<h2 id="doing-it-yourself">Doing it yourself</h2>
+<p>Hands-on experience tops every other learning method. Therefore it makes
+sense to start working with higher-level frameworks/libraries as soon as
+you feel you’ve conquered nuts and bolts of
+<a href="/2016/machine-learning-immersion">machine learning foundations</a>.</p>
+
+<p>But before you dive in and type all the research papers away, process of
+installation can get awfully bad.</p>
+
+<p>It can get n-wasted-hours bad. Or even worse, you somehow manage to
+scrape it together, but you feel bad because you’ve just entered fifteen
+semi-familiar commands and partially bloated your system since five
+didn’t work.</p>
+
+<h2 id="the-time-consuming-way">The time-consuming way</h2>
+<p>Install everything by reading official docs. Sometimes building from
+source. lol</p>
+
+<p>Questions I forgot to ask myself while I did this:<br />
+ - Do you really want all that extra software on your host machine?<br />
+ - What if you wanted to do same experiment/project somewhere else?<br />
+   Installing everything again?<br />
+ - If so what about host-specific configs needed on other machines?</p>
+
+<h2 id="docking-the-install">Docking the install</h2>
+<p><a href="https://www.docker.com/">Docker</a> is this fantastic tool that efficiently allows you to isolate
+your dev environments from the host machine(s).</p>
+
+<p>I have started using it just a few days ago to install <strong>all major DL frameworks at
+once</strong>, so I am no expert but I already see many benefits.</p>
+
+<p>Docker terminology:</p>
+
+<ul>
+  <li><strong>Dockerfile</strong><br />
+  A text document that has all commands needed to build <em>the image</em>. It’s
+  the recipe on how to create the image and what dependencies to install.</li>
+  <li><strong>Image</strong><br />
+  Docker <em>image</em> is built by dockerfile. It’s an immutable template that has
+  all dependencies and can be instantiated as <em>container</em>.</li>
+  <li><strong>Container</strong><br />
+  The container is a lightweight, self-contained environment that is instantiated
+  from an image and can be accessed via terminal/GUI. You can easily setup shared
+  folder between host and container, open ports for ipython notebooks or just use
+  terminal directly.</li>
+</ul>
+
+<p>Having clear idea of the concepts above, following through this
+<a href="https://github.com/saiprashanths/dl-docker">awesome README</a> you’ll get Tensorflow-Caffe-Theano-Keras-Lasagne-Torch-enabled
+machine up and running in no time.</p>
+
+<p>You may also find useful this <a href="https://github.com/wsargent/docker-cheat-sheet/blob/master/README.md">beautiful cheatsheet</a> that has many
+useful docker commands which can help your docker-fu.</p>
+
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/posts/2016/10/09/docked-deep-learning/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Sun, 09 Oct 2016 00:00:00 +0200</pubDate>
+                <author>Душан Јосиповић</author>
+            </item>
+        
+    
+        
+            <item>
+                <title>Machine learning immersion</title>
+                <link>http://sudo.engineer/posts/2016/09/24/machine-learning-immersion/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <p><em>This page will be updated as I absorb more stuff.</em></p>
+
+<h2 id="path-of-machine-learning">Path of Machine Learning</h2>
+<p>So you have finally decided to immerse yourself in the world of machine learning. Congrats! Here is my list of material I consider very useful.</p>
+
+<p>Staying up to date is very important for anything Computer Science related and is also true in the fast-evolving field of deep learning. So here are some of the latest educational materials.</p>
+
+<p>-</p>
+
+<h2 id="environment">Environment</h2>
+<p>The easiest way to pick up the speed is to surround yourself with people that are in the field and are sharing information through social networks. If you don’t know where to start, have a look at my <a href="https://twitter.com/josipovicd/following">twitter list</a> and go to their sources. If most of it doesn’t make sense in the beginning that’s fine. Keep calm and learn as much as you can.</p>
+
+<h2 id="online-courses">Online courses</h2>
+<p><a href="https://www.coursera.org/learn/machine-learning">Coursera, Machine Learning</a><br />
+Taught by fantastic Andrew Ng, this course provides a very nice introduction to the field of machine learning. You build all models yourself in Matlab/Octave. Especially useful is the course wiki that you are introduced to in Week 1. Highly recommended.</p>
+
+<p><a href="http://academictorrents.com/details/46c5af9e2075d9af06f280b55b65cf9b44eb9fe7">Stanford, Convolutional Neural Networks for Visual Recognition</a><br />
+Building upon what you learned previously, this course from January 2016 really gets you in the high gear where you delve deep into the nuts and bolts of CNNs, implementing networks every step of the way. There are also <a href="http://cs231n.github.io/">awesome notes and assignments</a> on the GitHub page of the course. Probably the best online course I have ever taken.</p>
+
+<h2 id="the-book">The book</h2>
+<p><a href="http://www.deeplearningbook.org/">Deep learning book</a>. It’s a fire hose, try not to drown your thirst for knowledge.</p>
+
+<p>-</p>
+
+<h2 id="something-i-am-about-to-dive-in">Something I am about to dive in</h2>
+<p><a href="http://upwork.com">UpWork</a>
+<a href="https://gym.openai.com/">OpenAI Gym</a>
+<a href="https://www.kaggle.com/">Kaggle competitions</a><br />
+Awesome places to further explore hot topics, meet people, sharpen your skills and make some money too!</p>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/posts/2016/09/24/machine-learning-immersion/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Sat, 24 Sep 2016 00:00:00 +0200</pubDate>
+                <author>Душан Јосиповић</author>
+            </item>
+        
+    
+        
+            <item>
+                <title>CompetitiveFlow</title>
+                <link>http://sudo.engineer/schemes/2016/06/08/Scripts-for-competitive-flow/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <h2 id="insane-habit-of-copy-pasting-tests">Insane habit of copy-pasting tests</h2>
+
+<p>If you have done any competitive programming on codeforces you may have noticed that in those intense moments when the clock is ticking away and some new insight into problem strikes you, you start copy-pasting test problems into terminal. And if you do it for a few times it becomes an insane habit that can ruin your train of thought that may lead to a solution.</p>
+
+<p>So after a few hours of tweaking I have made this pair of scripts that will allow you to test your solutions more easily. Check it out on <a href="https://github.com/dulex123/competitive-flow">Github</a></p>
+
+<iframe width="640" height="400" src="https://www.youtube.com/embed/vFjqoGfHRBk" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="update">Update:</h2>
+
+<p>After using competitive flow for a few rounds, I’ve got some new ideas that would be worth developing for even faster coding.</p>
+
+<p>Features:</p>
+
+<ul>
+  <li>
+    <p>Program connected to browser via extension with native support - this will enable the program to gather problem info without copying data</p>
+  </li>
+  <li>
+    <p>Terminal-gui (<a href="https://en.wikipedia.org/wiki/Ncurses">Ncurses lib</a>) where a,b,c,d,e,f selects problem mode and 1,2,3,4.. runs particular test on it</p>
+  </li>
+  <li>
+    <p>Run all tests / Submit command</p>
+  </li>
+  <li>
+    <p>Init - initialize folder with separate files for each problem filled with boilerplate code</p>
+  </li>
+</ul>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/schemes/2016/06/08/Scripts-for-competitive-flow/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Wed, 08 Jun 2016 00:00:00 +0200</pubDate>
+                <author>Душан Јосиповић</author>
+            </item>
+        
+    
+  </channel>
+</rss>
