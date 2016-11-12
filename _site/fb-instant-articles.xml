@@ -2,42 +2,15 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title></title>
-    <link>http://sudo.engineer</link>
+    <link>http://dulex123.github.io</link>
     <description>
       Experimental software engineering.
     </description>
     
         
             <item>
-                <title>LSTM backpropagation in cs231n</title>
-                <link>http://sudo.engineer/posts/2016/11/09/LSTM-backpropagation-in-cs231n/</link>
-                <content:encoded>
-                    <![CDATA[
-                    <p><em>This page will not try to explain what LSTM is or how it works. For that you can check colah’s blog and deeplearningbook, instead this will be a guide on how to perform a cell backprop for LSTM.</em></p>
-
-<p><em><strong>Notice:</strong> It’s recommended that you try to do the exercise on your own, only if you’ve tried your best should you proceed.</em></p>
-
-<hr />
-
-<p><img src="http://imgh.us/dg1.svg" alt="alt text" /></p>
-
-                    ]]>
-                </content:encoded>
-                <guid isPermaLink="false">/posts/2016/11/09/LSTM-backpropagation-in-cs231n/</guid>
-                <description>
-                    
-                    Summary needed.
-                    
-                </description>
-                <pubDate>Wed, 09 Nov 2016 00:00:00 +0100</pubDate>
-                <author>Душан Јосиповић</author>
-            </item>
-        
-    
-        
-            <item>
                 <title>Starting with deep learning frameworks</title>
-                <link>http://sudo.engineer/posts/2016/10/09/docked-deep-learning/</link>
+                <link>http://dulex123.github.io/posts/2016/10/09/docked-deep-learning/</link>
                 <content:encoded>
                     <![CDATA[
                     <p><strong><em>Notice: This 3min post can potentially save you ~14hrs of wasted time,
@@ -122,7 +95,7 @@ useful docker commands which can help your docker-fu.</p>
         
             <item>
                 <title>Machine learning immersion</title>
-                <link>http://sudo.engineer/posts/2016/09/24/machine-learning-immersion/</link>
+                <link>http://dulex123.github.io/posts/2016/09/24/machine-learning-immersion/</link>
                 <content:encoded>
                     <![CDATA[
                     <p><em>This page will be updated as I absorb more stuff.</em></p>
@@ -171,7 +144,7 @@ Awesome places to further explore hot topics, meet people, sharpen your skills a
         
             <item>
                 <title>CompetitiveFlow</title>
-                <link>http://sudo.engineer/schemes/2016/06/08/Scripts-for-competitive-flow/</link>
+                <link>http://dulex123.github.io/schemes/2016/06/08/Scripts-for-competitive-flow/</link>
                 <content:encoded>
                     <![CDATA[
                     <h2 id="insane-habit-of-copy-pasting-tests">Insane habit of copy-pasting tests</h2>

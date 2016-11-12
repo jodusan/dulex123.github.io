@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Душан Јосиповић</title>
+    <title>Dusan Josipovic</title>
     <description>Experimental software engineering.</description>
-    <link>http://sudo.engineer/</link>
-    <atom:link href="http://sudo.engineer/feed.xml" rel="self" type="application/rss+xml" />
-    
-      <item>
-        <title>LSTM backpropagation in cs231n</title>
-        <description>&lt;p&gt;&lt;em&gt;This page will not try to explain what LSTM is or how it works. For that you can check colah’s blog and deeplearningbook, instead this will be a guide on how to perform a cell backprop for LSTM.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Notice:&lt;/strong&gt; It’s recommended that you try to do the exercise on your own, only if you’ve tried your best should you proceed.&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://imgh.us/dg1.svg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 09 Nov 2016 00:00:00 +0100</pubDate>
-        <link>http://sudo.engineer/posts/2016/11/09/LSTM-backpropagation-in-cs231n/</link>
-        <guid isPermaLink="true">http://sudo.engineer/posts/2016/11/09/LSTM-backpropagation-in-cs231n/</guid>
-      </item>
+    <link>http://dulex123.github.io/</link>
+    <atom:link href="http://dulex123.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Starting with deep learning frameworks</title>
@@ -90,8 +75,8 @@ useful docker commands which can help your docker-fu.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 09 Oct 2016 00:00:00 +0200</pubDate>
-        <link>http://sudo.engineer/posts/2016/10/09/docked-deep-learning/</link>
-        <guid isPermaLink="true">http://sudo.engineer/posts/2016/10/09/docked-deep-learning/</guid>
+        <link>http://dulex123.github.io/posts/2016/10/09/docked-deep-learning/</link>
+        <guid isPermaLink="true">http://dulex123.github.io/posts/2016/10/09/docked-deep-learning/</guid>
       </item>
     
       <item>
@@ -127,8 +112,8 @@ Building upon what you learned previously, this course from January 2016 really 
 Awesome places to further explore hot topics, meet people, sharpen your skills and make some money too!&lt;/p&gt;
 </description>
         <pubDate>Sat, 24 Sep 2016 00:00:00 +0200</pubDate>
-        <link>http://sudo.engineer/posts/2016/09/24/machine-learning-immersion/</link>
-        <guid isPermaLink="true">http://sudo.engineer/posts/2016/09/24/machine-learning-immersion/</guid>
+        <link>http://dulex123.github.io/posts/2016/09/24/machine-learning-immersion/</link>
+        <guid isPermaLink="true">http://dulex123.github.io/posts/2016/09/24/machine-learning-immersion/</guid>
       </item>
     
       <item>
@@ -163,8 +148,8 @@ Awesome places to further explore hot topics, meet people, sharpen your skills a
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 08 Jun 2016 00:00:00 +0200</pubDate>
-        <link>http://sudo.engineer/schemes/2016/06/08/Scripts-for-competitive-flow/</link>
-        <guid isPermaLink="true">http://sudo.engineer/schemes/2016/06/08/Scripts-for-competitive-flow/</guid>
+        <link>http://dulex123.github.io/schemes/2016/06/08/Scripts-for-competitive-flow/</link>
+        <guid isPermaLink="true">http://dulex123.github.io/schemes/2016/06/08/Scripts-for-competitive-flow/</guid>
       </item>
     
   </channel>

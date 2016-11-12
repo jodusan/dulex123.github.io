@@ -1,0 +1,65 @@
+<p><strong><em>Notice: This 3min post can potentially save you ~14hrs of wasted time,
+depending on your level of knowledge.</em></strong></p>
+
+<hr />
+
+<p><em>Dear Diary,<br />
+I have lost around <strong>16 working hours</strong> on trying to set up caffe deep
+learning framework on Ubuntu 16.04. I am currently on the 9th level of
+dependency hell, and there is no light at the end of the tunnel. There is
+no tunnel either. Because you have held broken packages.</em></p>
+
+<h2 id="doing-it-yourself">Doing it yourself</h2>
+<p>Hands-on experience tops every other learning method. Therefore it makes
+sense to start working with higher-level frameworks/libraries as soon as
+you feel you’ve conquered nuts and bolts of
+<a href="/posts/2016/09/24/machine-learning-immersion/">machine learning foundations</a>.</p>
+
+<p>But before you dive in and type all the research papers away, process of
+installation can get awfully bad.</p>
+
+<p>It can get n-wasted-hours bad. Or even worse, you somehow manage to
+scrape it together, but you feel bad because you’ve just entered fifteen
+semi-familiar commands and partially bloated your system since five
+didn’t work.</p>
+
+<h2 id="the-time-consuming-way">The time-consuming way</h2>
+<p>Install everything by reading official docs. Sometimes building from
+source. lol</p>
+
+<p>Questions I forgot to ask myself while I did this:<br />
+ - Do you really want all that extra software on your host machine?<br />
+ - What if you wanted to do same experiment/project somewhere else?<br />
+   Installing everything again?<br />
+ - If so what about host-specific configs needed on other machines?</p>
+
+<h2 id="docking-the-install">Docking the install</h2>
+<p><a href="https://www.docker.com/">Docker</a> is this fantastic tool that efficiently allows you to isolate
+your dev environments from the host machine(s).</p>
+
+<p>I have started using it just a few days ago to install <strong>all major DL frameworks at
+once</strong>, so I am no expert but I already see many benefits.</p>
+
+<p>Docker terminology:</p>
+
+<ul>
+  <li><strong>Dockerfile</strong><br />
+  A text document that has all commands needed to build <em>the image</em>. It’s
+  the recipe on how to create the image and what dependencies to install.</li>
+  <li><strong>Image</strong><br />
+  Docker <em>image</em> is built by dockerfile. It’s an immutable template that has
+  all dependencies and can be instantiated as <em>container</em>.</li>
+  <li><strong>Container</strong><br />
+  The container is a lightweight, self-contained environment that is instantiated
+  from an image and can be accessed via terminal/GUI. You can easily setup shared
+  folder between host and container, open ports for ipython notebooks or just use
+  terminal directly.</li>
+</ul>
+
+<p>Having clear idea of the concepts above, following through this
+<a href="https://github.com/saiprashanths/dl-docker">awesome README</a> you’ll get Tensorflow-Caffe-Theano-Keras-Lasagne-Torch-enabled
+machine up and running in no time.</p>
+
+<p>You may also find useful this <a href="https://github.com/wsargent/docker-cheat-sheet/blob/master/README.md">beautiful cheatsheet</a> that has many
+useful docker commands which can help your docker-fu.</p>
+
