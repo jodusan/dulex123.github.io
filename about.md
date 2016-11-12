@@ -6,7 +6,6 @@ tags: about
 ---
 
 # Hi there!  
-
 My name is Dušan Josipović. I am a machine learning enthusiast and I have been [studying](/posts/2016/09/24/machine-learning-immersion/) the subject of Deep Learning for the past few months.
 
 You can find some of my code on [github](https://github.com/dulex123).

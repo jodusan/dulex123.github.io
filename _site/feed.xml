@@ -7,6 +7,21 @@
     <atom:link href="http://sudo.engineer/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>LSTM backpropagation in cs231n</title>
+        <description>&lt;p&gt;&lt;em&gt;This page will not try to explain what LSTM is or how it works. For that you can check colah’s blog and deeplearningbook, instead this will be a guide on how to perform a cell backprop for LSTM.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Notice:&lt;/strong&gt; It’s recommended that you try to do the exercise on your own, only if you’ve tried your best should you proceed.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgh.us/dg1.svg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 09 Nov 2016 00:00:00 +0100</pubDate>
+        <link>http://sudo.engineer/posts/2016/11/09/LSTM-backpropagation-in-cs231n/</link>
+        <guid isPermaLink="true">http://sudo.engineer/posts/2016/11/09/LSTM-backpropagation-in-cs231n/</guid>
+      </item>
+    
+      <item>
         <title>Starting with deep learning frameworks</title>
         <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Notice: This 3min post can potentially save you ~14hrs of wasted time,
 depending on your level of knowledge.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
