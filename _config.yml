@@ -1,10 +1,10 @@
 # Site settings
-title:       "Душан Јосиповић"
+title:       "Dusan Josipovic"
 email:       dusanix@gmail.com
 author:      Душан Јосиповић
 description: "Experimental software engineering."
 baseurl:     ""
-url:         "http://sudo.engineer"
+url:         "http://dulex123.github.io"
 date_format: "%b %-d, %Y"
 
 # Google services
