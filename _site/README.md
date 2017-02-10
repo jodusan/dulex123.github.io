@@ -21,7 +21,7 @@ If you're completely new to Jekyll, I recommend checking out the documentation a
 $ git clone git@github.com:johnotander/pixyll.git
 $ cd pixyll
 $ gem install bundler # If you don't have bundler installed
-$ bundle install
+$ bundle install # if it fails, try sagi ruby-dev first 
 ```
 
 If you don't want to install anything in your local machine, you can create a free development environment for this Pixyll project in the cloud on [Nitrous.io](https://www.nitrous.io) by clicking the button below.

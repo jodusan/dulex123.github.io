@@ -7,76 +7,178 @@
     <atom:link href="http://dulex123.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Starting with deep learning frameworks</title>
-        <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Notice: This 3min post can potentially save you ~14hrs of wasted time,
-depending on your level of knowledge.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+        <title>Docked deep learning / software development</title>
+        <description>&lt;p&gt;&lt;em&gt;If you are tired of installing bloatware everytime you want to run a project that has dependencies, then Docker may be a solution for you!&lt;/em&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;em&gt;Dear Diary,&lt;br /&gt;
-I have lost around &lt;strong&gt;16 working hours&lt;/strong&gt; on trying to set up caffe deep
-learning framework on Ubuntu 16.04. I am currently on the 9th level of
-dependency hell, and there is no light at the end of the tunnel. There is
-no tunnel either. Because you have held broken packages.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Docker allows you to isolate your new project environment from your host OS efficiently, something like virtualenv in python but more VM-like, but then again without the whole OS installation and massive resource consumption.&lt;/p&gt;
 
-&lt;h2 id=&quot;doing-it-yourself&quot;&gt;Doing it yourself&lt;/h2&gt;
-&lt;p&gt;Hands-on experience tops every other learning method. Therefore it makes
-sense to start working with higher-level frameworks/libraries as soon as
-you feel you’ve conquered nuts and bolts of
-&lt;a href=&quot;/posts/2016/09/24/machine-learning-immersion/&quot;&gt;machine learning foundations&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;theory&quot;&gt;1. Theory&lt;/h2&gt;
 
-&lt;p&gt;But before you dive in and type all the research papers away, process of
-installation can get awfully bad.&lt;/p&gt;
-
-&lt;p&gt;It can get n-wasted-hours bad. Or even worse, you somehow manage to
-scrape it together, but you feel bad because you’ve just entered fifteen
-semi-familiar commands and partially bloated your system since five
-didn’t work.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-time-consuming-way&quot;&gt;The time-consuming way&lt;/h2&gt;
-&lt;p&gt;Install everything by reading official docs. Sometimes building from
-source. lol&lt;/p&gt;
-
-&lt;p&gt;Questions I forgot to ask myself while I did this:&lt;br /&gt;
- - Do you really want all that extra software on your host machine?&lt;br /&gt;
- - What if you wanted to do same experiment/project somewhere else?&lt;br /&gt;
-   Installing everything again?&lt;br /&gt;
- - If so what about host-specific configs needed on other machines?&lt;/p&gt;
-
-&lt;h2 id=&quot;docking-the-install&quot;&gt;Docking the install&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; is this fantastic tool that efficiently allows you to isolate
-your dev environments from the host machine(s).&lt;/p&gt;
-
-&lt;p&gt;I have started using it just a few days ago to install &lt;strong&gt;all major DL frameworks at
-once&lt;/strong&gt;, so I am no expert but I already see many benefits.&lt;/p&gt;
-
-&lt;p&gt;Docker terminology:&lt;/p&gt;
+&lt;p&gt;So let’s start with easy docker concepts:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Dockerfile&lt;/strong&gt;&lt;br /&gt;
-  A text document that has all commands needed to build &lt;em&gt;the image&lt;/em&gt;. It’s
-  the recipe on how to create the image and what dependencies to install.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Image&lt;/strong&gt;&lt;br /&gt;
-  Docker &lt;em&gt;image&lt;/em&gt; is built by dockerfile. It’s an immutable template that has
-  all dependencies and can be instantiated as &lt;em&gt;container&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt;&lt;br /&gt;
-  The container is a lightweight, self-contained environment that is instantiated
-  from an image and can be accessed via terminal/GUI. You can easily setup shared
-  folder between host and container, open ports for ipython notebooks or just use
-  terminal directly.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Container&lt;/strong&gt;&lt;br /&gt;
+All action happens within the container. When you want to run a script you run it from the inside of a container, if you want to install software, you run it inside the container. If your friend wants to try your software without wasting 14hrs on framework stack setup, you send him your container.&lt;/p&gt;
+
+    &lt;p&gt;So the container is an environment in which you can do whatever you want with no consequences to your host OS. And if you screw something up within a container? You just delete it, create another one (or 6, 10, 200) just like it and try again.&lt;/p&gt;
+
+    &lt;p&gt;So container idea as a separate entity should be clear by now. But what is within a container? What software is preinstalled? Which OS?&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Having clear idea of the concepts above, following through this
-&lt;a href=&quot;https://github.com/saiprashanths/dl-docker&quot;&gt;awesome README&lt;/a&gt; you’ll get Tensorflow-Caffe-Theano-Keras-Lasagne-Torch-enabled
-machine up and running in no time.&lt;/p&gt;
+&lt;p&gt;These questions lead us to &lt;em&gt;the image&lt;/em&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Image&lt;/strong&gt;
+Image is an immutable template that can be instantiated as a container. Something like this:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/xZr1QfY.png&quot; alt=&quot;Image container relationship&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So once created, an image is immutable (changes during the lifetime of a container does not affect the image). It serves as a common ground for all containers it instantiates. Whatever you do is saved within a container, but container communicates with its image and all operations are going through the image. You need one image, and you can instantiate any number of containers.&lt;/p&gt;
+
+&lt;p&gt;How this helps is evident from the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you had a 2GB VM, you would need 2GB x how many VMs you want. And that’s only disk space; there will be massive consumption of CPU, RAM and other resources you need. With Docker, much of that 2GB are shared between containers, and with 1000 containers you will get only a little over a 2GB space requirement. (If they are of the same image ofc) So for less isolation than an actual VM you are getting very lightweight containers.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Also, fully virtualized VM takes minutes to start where Docker container takes only seconds.&lt;/p&gt;
+
+&lt;p&gt;An alternative explanation of image and container relationship from OOP perception:&lt;br /&gt;
+  - Image is equivalent to a class in OOP whereas&lt;br /&gt;
+  - A container is equivalent to an object&lt;/p&gt;
+
+&lt;p&gt;But what defines an image? How is it created? - It comes from a  txt file called:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Dockerfile&lt;/strong&gt;
+Textual file on what to setup within an image that can later be instantiated as a container and used. You build docker image from dockerfile.&lt;/p&gt;
+
+    &lt;p&gt;The beautiful thing is that probably someone somewhere before you needed the same or similar stack and there are docker files for you just to download them. Even better, instead of building an image yourself (which depending on a dockerfile can last for quite some time), you can find them online at dockerhub or similar websites, download it, instantiate a container and start experimenting with your code.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Although containers are isolated, you can share folders between host OS and container, open network ports, etc., just as in regular VM.&lt;/p&gt;
+
+&lt;h2 id=&quot;practice&quot;&gt;2. Practice&lt;/h2&gt;
+&lt;p&gt;So let’s use all this information to create a suitable environment for a deep learning project. My host OS is Ubuntu 16.04 so that’s what I’ll use.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Step 0: Install docker and nvidia-docker
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/engine/installation/linux/ubuntu/&quot;&gt;Official docker installation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/NVIDIA/nvidia-docker&quot;&gt;Nvidia-docker&lt;/a&gt; package is used to leverage GPU for anything you do inside container, you just need to have nvidia drivers installed on your host OS. It is not necessary, but for our application is very desirable. If you are not using GPU you don’t need this package. Everywhere you see nvidia-docker just type docker instead.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Step 1: Getting suitable dockerfile
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;I’ve stumbled upon this great dockerfile repo &lt;a href=&quot;https://github.com/floydhub/dl-docker&quot;&gt;dl-docker&lt;/a&gt;. It will install Ubuntu 14.04 with CUDA 8, cuDNNv5, Tensorflow, Caffe, Theano, Keras, Lasagne, Torch, iPython/Jupyter, Numpy-Scipy-Scikit learn-matplotlib on top of it.&lt;/p&gt;
+
+        &lt;p&gt;To get the dockerfile from github just type:&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone https://github.com/saiprashanths/dl-docker.git
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;dl-docker
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Step 2: Build or download image
+    &lt;ul&gt;
+      &lt;li&gt;Since many images are available for download, you can directly download your image from a place like &lt;a href=&quot;https://hub.docker.com/&quot;&gt;dockerhub&lt;/a&gt;. We are going to build our own image because currently there is no GPU image for dockerfile on dockerhub. Check the bottom of this page if you run into errors:&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Notice the dot at the end&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;&lt;em&gt;There is an image on dockerhub without GPU support and we could download it without building&lt;/em&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# We don&#39;t need this if we are using GPU&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker pull floydhub/dl-docker:cpu
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Step 3: Instantiate a container
+    &lt;ul&gt;
+      &lt;li&gt;Now we will create our container with two network ports and one folder shared with the host OS.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nvidia-docker run -it -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:gpu bash
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Parameter &lt;strong&gt;-p port1:port2&lt;/strong&gt; maps port1 from host OS to port2 on container&lt;br /&gt;
+This means that whatever is launched on port2 inside container will show up in your host OS browser if you go to http://localhost:port1.&lt;/p&gt;
+
+    &lt;p&gt;Parameter &lt;strong&gt;-v folder1:folder2&lt;/strong&gt; maps absolute path folder1 on host OS to folder2 on container. If you change anything in folder1 it will reflect inside of a container on folder2.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once you create a container, you will get a root access to it (no need for users since it is isolated right?). When you finish your work, you can type exit, and it will save the container state and stop the container. You will probably want to use that container again so here are some commands that can be helpful:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# List all images&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo docker images
+
+&lt;span class=&quot;c&quot;&gt;# List currently running containers&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo docker ps
+
+&lt;span class=&quot;c&quot;&gt;# List all containers&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo docker ps -a
+
+&lt;span class=&quot;c&quot;&gt;# Start some container&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo docker start &amp;lt;container_name&amp;gt;
+
+&lt;span class=&quot;c&quot;&gt;# Connect to container (Attach to container terminal)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo docker attach &amp;lt;container_name&amp;gt;
+
+&lt;span class=&quot;c&quot;&gt;# Connect second terminal to container (or more)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo docker &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; -it &amp;lt;container_name&amp;gt; bash
+
+&lt;span class=&quot;c&quot;&gt;# Remove a container&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo docker rm &amp;lt;container_name&amp;gt;
+
+&lt;span class=&quot;c&quot;&gt;# Remove an image&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo docker rmi &amp;lt;image_name&amp;gt;
+
+&lt;span class=&quot;c&quot;&gt;# You can use container_id instead of container_name&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; I’ve said that you can ship containers to a friend. Although this is possible much more sensible thing to do would be for him to download/build an image and pull your project from a git repo, within the instantiated container.&lt;/p&gt;
 
 &lt;p&gt;You may also find useful this &lt;a href=&quot;https://github.com/wsargent/docker-cheat-sheet/blob/master/README.md&quot;&gt;beautiful cheatsheet&lt;/a&gt; that has many
 useful docker commands which can help your docker-fu.&lt;/p&gt;
 
+&lt;h2 id=&quot;errors-while-building-the-image&quot;&gt;Errors while building the image:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;setup.py egg_info error can be solved with&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install &lt;span class=&quot;nv&quot;&gt;setuptools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;33.1.1
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you get an error with libopenjpeg2, the package is renamed to libopenjpeg5 so you just need to:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libopenjpeg5
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
-        <pubDate>Sun, 09 Oct 2016 00:00:00 +0200</pubDate>
-        <link>http://dulex123.github.io/posts/2016/10/09/docked-deep-learning/</link>
-        <guid isPermaLink="true">http://dulex123.github.io/posts/2016/10/09/docked-deep-learning/</guid>
+        <pubDate>Thu, 09 Feb 2017 00:00:00 +0100</pubDate>
+        <link>http://dulex123.github.io/posts/2017/02/09/docked-deep-learning/</link>
+        <guid isPermaLink="true">http://dulex123.github.io/posts/2017/02/09/docked-deep-learning/</guid>
       </item>
     
       <item>
@@ -91,7 +193,7 @@ useful docker commands which can help your docker-fu.&lt;/p&gt;
 &lt;p&gt;-&lt;/p&gt;
 
 &lt;h2 id=&quot;environment&quot;&gt;Environment&lt;/h2&gt;
-&lt;p&gt;The easiest way to pick up the speed is to surround yourself with people that are in the field and are sharing information through social networks. If you don’t know where to start, have a look at my &lt;a href=&quot;https://twitter.com/josipovicd/following&quot;&gt;twitter list&lt;/a&gt; and go to their sources. If most of it doesn’t make sense in the beginning that’s fine. Keep calm and learn as much as you can.&lt;/p&gt;
+&lt;p&gt;The easiest way to pick up the speed is to surround yourself with people that are in the field and are sharing information through social networks. If you don’t know where to start, have a look at my &lt;a href=&quot;https://twitter.com/josipovicd/following&quot;&gt;twitter list&lt;/a&gt; and go to their sources. If most of it doesn’t make sense in the beginning that’s ok.&lt;/p&gt;
 
 &lt;h2 id=&quot;online-courses&quot;&gt;Online courses&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.coursera.org/learn/machine-learning&quot;&gt;Coursera, Machine Learning&lt;/a&gt;&lt;br /&gt;
@@ -101,7 +203,7 @@ Taught by fantastic Andrew Ng, this course provides a very nice introduction to 
 Building upon what you learned previously, this course from January 2016 really gets you in the high gear where you delve deep into the nuts and bolts of CNNs, implementing networks every step of the way. There are also &lt;a href=&quot;http://cs231n.github.io/&quot;&gt;awesome notes and assignments&lt;/a&gt; on the GitHub page of the course. Probably the best online course I have ever taken.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-book&quot;&gt;The book&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.deeplearningbook.org/&quot;&gt;Deep learning book&lt;/a&gt;. It’s a fire hose, try not to drown your thirst for knowledge.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.deeplearningbook.org/&quot;&gt;Deep learning book&lt;/a&gt;. Very well written book on important topics for neural network construction.&lt;/p&gt;
 
 &lt;p&gt;-&lt;/p&gt;
 

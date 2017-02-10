@@ -2,9 +2,11 @@
     {% if page.tags contains "about" %}
         <a href="{{ page.url }}">{{ page.title }}</a>
     {% endif %}
-{% endfor %}
-{% for page in site.pages %}
     {% if page.tags contains "contact" %}
         <a href="{{ page.url }}">{{ page.title }}</a>
     {% endif %}
+    {% if page.tags contains "feed" %}
+        <a href="{{ page.url }}">{{ page.title }}</a>
+    {% endif %}
 {% endfor %}
+<a href="{{site.baseurl }}/feed.xml">RSS</a>

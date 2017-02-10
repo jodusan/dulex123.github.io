@@ -15,7 +15,7 @@ Staying up to date is very important for anything Computer Science related and i
 -
 
 ## Environment
-The easiest way to pick up the speed is to surround yourself with people that are in the field and are sharing information through social networks. If you don't know where to start, have a look at my [twitter list](https://twitter.com/josipovicd/following) and go to their sources. If most of it doesn't make sense in the beginning that's fine. Keep calm and learn as much as you can.
+The easiest way to pick up the speed is to surround yourself with people that are in the field and are sharing information through social networks. If you don't know where to start, have a look at my [twitter list](https://twitter.com/josipovicd/following) and go to their sources. If most of it doesn't make sense in the beginning that's ok.
 
 ## Online courses
 [Coursera, Machine Learning](https://www.coursera.org/learn/machine-learning)  
@@ -25,7 +25,7 @@ Taught by fantastic Andrew Ng, this course provides a very nice introduction to 
 Building upon what you learned previously, this course from January 2016 really gets you in the high gear where you delve deep into the nuts and bolts of CNNs, implementing networks every step of the way. There are also [awesome notes and assignments](http://cs231n.github.io/) on the GitHub page of the course. Probably the best online course I have ever taken.
 
 ## The book
-[Deep learning book](http://www.deeplearningbook.org/). It's a fire hose, try not to drown your thirst for knowledge.
+[Deep learning book](http://www.deeplearningbook.org/). Very well written book on important topics for neural network construction.
 
 -
 
