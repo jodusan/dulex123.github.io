@@ -10,7 +10,7 @@
         
             <item>
                 <title>Docked deep learning</title>
-                <link>http://dulex123.github.io/2017/02/09/docked-deep-learning/</link>
+                <link>http://dulex123.github.io/posts/2017/02/09/docked-deep-learning/</link>
                 <content:encoded>
                     <![CDATA[
                     <p><em>If you are tired of installing bloatware everytime you want to run a project that has dependencies, then Docker may be a solution for you!</em></p>
@@ -183,7 +183,7 @@ useful docker commands which can help your docker-fu.</p>
 
                     ]]>
                 </content:encoded>
-                <guid isPermaLink="false">/2017/02/09/docked-deep-learning/</guid>
+                <guid isPermaLink="false">/posts/2017/02/09/docked-deep-learning/</guid>
                 <description>
                     
                     Avoid bloating your system with tons of dependencies.
