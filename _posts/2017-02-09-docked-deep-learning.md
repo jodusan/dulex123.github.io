@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Docked deep learning / software development
-category: posts
+title: Docked deep learning
 summary: Avoid bloating your system with tons of dependencies.
 ---
 
