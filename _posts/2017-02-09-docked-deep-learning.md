@@ -2,8 +2,9 @@
 layout: post
 title: Docked deep learning
 category: posts
-summary: Avoid bloating your system with tons of dependencies.
+summary: Avoid bloating your system with tons of dependencies
 ---
+
 
 *If you are tired of installing bloatware everytime you want to run a project that has dependencies, then Docker may be a solution for you!*
 
@@ -55,9 +56,19 @@ Although containers are isolated, you can share folders between host OS and cont
 ## 2. Practice
 So let's use all this information to create a suitable environment for a deep learning project. My host OS is Ubuntu 16.04 so that's what I'll use.
 
-- Step 0: Install docker and nvidia-docker
+- Step 0: Install docker, nvidia-docker and give user permissions
   - [Official docker installation][docker-official]
   - [Nvidia-docker][nvidia] package is used to leverage GPU for anything you do inside container, you just need to have nvidia drivers installed on your host OS. It is not necessary, but for our application is very desirable. If you are not using GPU you don't need this package. Everywhere you see nvidia-docker just type docker instead.
+  - In order not to have to type your sudo password every time, you can *optionally* add a user to docker group, with these lines:
+    ~~~ bash
+    # Create group if it's not there
+    $ sudo groupadd docker
+
+    # Add user to the docker group
+    $ sudo usermod -aG docker $USER
+
+    # Log out and login for changes to take effect
+    ~~~
 
 - Step 1: Getting suitable dockerfile
   - I've stumbled upon this great dockerfile repo [dl-docker]. It will install Ubuntu 14.04 with CUDA 8, cuDNNv5, Tensorflow, Caffe, Theano, Keras, Lasagne, Torch, iPython/Jupyter, Numpy-Scipy-Scikit learn-matplotlib on top of it.
