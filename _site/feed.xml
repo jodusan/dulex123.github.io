@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dusan Josipovic</title>
-    <description>Experimental software engineering.</description>
+    <description>Deep learning adventures.</description>
     <link>http://dulex123.github.io/</link>
     <atom:link href="http://dulex123.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
@@ -82,7 +82,7 @@ Textual file on what to setup within an image that can later be instantiated as 
       &lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone https://github.com/saiprashanths/dl-docker.git
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone https://github.com/saiprashanths/dl-docker.git
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;dl-docker
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
@@ -92,14 +92,14 @@ Textual file on what to setup within an image that can later be instantiated as 
       &lt;li&gt;Since many images are available for download, you can directly download your image from a place like &lt;a href=&quot;https://hub.docker.com/&quot;&gt;dockerhub&lt;/a&gt;. We are going to build our own image because currently there is no GPU image for dockerfile on dockerhub. Check the bottom of this page if you run into errors:&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Notice the dot at the end&lt;/span&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Notice the dot at the end&lt;/span&gt;
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
 
     &lt;p&gt;&lt;em&gt;There is an image on dockerhub without GPU support and we could download it without building&lt;/em&gt;&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# We don&#39;t need this if we are using GPU&lt;/span&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# We don't need this if we are using GPU&lt;/span&gt;
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker pull floydhub/dl-docker:cpu
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
@@ -109,7 +109,7 @@ Textual file on what to setup within an image that can later be instantiated as 
       &lt;li&gt;Now we will create our container with two network ports and one folder shared with the host OS.&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nvidia-docker run -it -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:gpu bash
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nvidia-docker run -it -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:gpu bash
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
 
@@ -122,7 +122,7 @@ This means that whatever is launched on port2 inside container will show up in y
 
 &lt;p&gt;Once you create a container, you will get a root access to it (no need for users since it is isolated right?). When you finish your work, you can type exit, and it will save the container state and stop the container. You will probably want to use that container again so here are some commands that can be helpful:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# List all images&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# List all images&lt;/span&gt;
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo docker images
 
 &lt;span class=&quot;c&quot;&gt;# List currently running containers&lt;/span&gt;
@@ -162,14 +162,14 @@ useful docker commands which can help your docker-fu.&lt;/p&gt;
   &lt;li&gt;
     &lt;p&gt;setup.py egg_info error can be solved with&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install &lt;span class=&quot;nv&quot;&gt;setuptools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;33.1.1
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install &lt;span class=&quot;nv&quot;&gt;setuptools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;33.1.1
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;If you get an error with libopenjpeg2, the package is renamed to libopenjpeg5 so you just need to:&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libopenjpeg5
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libopenjpeg5
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
   &lt;/li&gt;

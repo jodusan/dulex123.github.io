@@ -4,7 +4,7 @@
     <title></title>
     <link>http://dulex123.github.io</link>
     <description>
-      Experimental software engineering.
+      Deep learning adventures.
     </description>
     
         
@@ -87,7 +87,7 @@ Textual file on what to setup within an image that can later be instantiated as 
       </li>
     </ul>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone https://github.com/saiprashanths/dl-docker.git
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone https://github.com/saiprashanths/dl-docker.git
 <span class="gp">$ </span><span class="nb">cd </span>dl-docker
 </code></pre>
     </div>
@@ -97,14 +97,14 @@ Textual file on what to setup within an image that can later be instantiated as 
       <li>Since many images are available for download, you can directly download your image from a place like <a href="https://hub.docker.com/">dockerhub</a>. We are going to build our own image because currently there is no GPU image for dockerfile on dockerhub. Check the bottom of this page if you run into errors:</li>
     </ul>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code><span class="c"># Notice the dot at the end</span>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># Notice the dot at the end</span>
 <span class="gp">$ </span>docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
 </code></pre>
     </div>
 
     <p><em>There is an image on dockerhub without GPU support and we could download it without building</em></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code><span class="c"># We don't need this if we are using GPU</span>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># We don't need this if we are using GPU</span>
 <span class="gp">$ </span>docker pull floydhub/dl-docker:cpu
 </code></pre>
     </div>
@@ -114,7 +114,7 @@ Textual file on what to setup within an image that can later be instantiated as 
       <li>Now we will create our container with two network ports and one folder shared with the host OS.</li>
     </ul>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>nvidia-docker run -it -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:gpu bash
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>nvidia-docker run -it -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:gpu bash
 </code></pre>
     </div>
 
@@ -127,7 +127,7 @@ This means that whatever is launched on port2 inside container will show up in y
 
 <p>Once you create a container, you will get a root access to it (no need for users since it is isolated right?). When you finish your work, you can type exit, and it will save the container state and stop the container. You will probably want to use that container again so here are some commands that can be helpful:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="c"># List all images</span>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># List all images</span>
 <span class="gp">$ </span>sudo docker images
 
 <span class="c"># List currently running containers</span>
@@ -167,14 +167,14 @@ useful docker commands which can help your docker-fu.</p>
   <li>
     <p>setup.py egg_info error can be solved with</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>pip install <span class="nv">setuptools</span><span class="o">==</span>33.1.1
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>pip install <span class="nv">setuptools</span><span class="o">==</span>33.1.1
 </code></pre>
     </div>
   </li>
   <li>
     <p>If you get an error with libopenjpeg2, the package is renamed to libopenjpeg5 so you just need to:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install libopenjpeg5
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install libopenjpeg5
 </code></pre>
     </div>
   </li>
