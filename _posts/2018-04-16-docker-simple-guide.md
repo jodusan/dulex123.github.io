@@ -26,12 +26,12 @@ Let's start with main docker concepts:
 
 These questions lead us to *the image*.
 
-- **Image**
+- **Image**  
   Image is an immutable template that can be instantiated as a container. Something like this:
 
-![Image container relationship](http://i.imgur.com/xZr1QfY.png)
+    ![Image container relationship](http://i.imgur.com/xZr1QfY.png)
 
-  So once created, an image is immutable (changes during the lifetime of a container does not affect the image). It serves as a common ground for all containers it instantiates. Whatever you do is saved within a container, but container communicates with its image and all operations are going through the image. You need one image, and you can instantiate any number of containers.
+    So once created, an image is immutable (changes during the lifetime of a container does not affect the image). It serves as a common ground for all containers it instantiates. Whatever you do is saved within a container, but container communicates with its image and all operations are going through the image. You need one image, and you can instantiate any number of containers.
 
   How this helps is evident from the following:
 
@@ -45,7 +45,7 @@ These questions lead us to *the image*.
 
 But what defines an image? How is it created? - It comes from a  txt file called:
 
-- **Dockerfile**
+- **Dockerfile**  
   Textual file on what to setup within an image that can later be instantiated as a container and used. You build docker image from dockerfile.
 
   The beautiful thing is that probably someone somewhere before you needed the same or similar stack and there are docker files for you just to download them. Even better, instead of building an image yourself (which depending on a dockerfile can last for quite some time), you can find them online at dockerhub or similar websites, download it, instantiate a container and start experimenting with your code.
