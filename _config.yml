@@ -42,8 +42,8 @@ minima_reboot:
 
 header_pages:
 - about.md
+- contact.md
 - posts.md
-- github.md
 
 footer_icons:
 - username: dulex123
