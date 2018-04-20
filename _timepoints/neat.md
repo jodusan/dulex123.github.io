@@ -1,6 +1,5 @@
 ---
-header: neat
-date: 2014-04-21
-icon: location
+header: Neuroevolution of Augmenting Topologies
+date: 2016-01-11
+icon: project
 ---
-neattt

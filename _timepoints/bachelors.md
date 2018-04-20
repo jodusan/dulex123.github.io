@@ -1,7 +1,8 @@
 ---
-header: Bachelor degree
-date: 2017-08-10
-icon: location
+header: Bachelor of Computer Science
+date: 2017-11-17
+icon: hat
 ---
 
-finished my bachelors with a thesis Reinforcement learning
+2013-2017: Union University, Faculty of Computer Science
+

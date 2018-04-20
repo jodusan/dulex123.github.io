@@ -1,7 +1,5 @@
 ---
 header: Petnica Summer Institute - Machine learning
-date: 2015-04-12
-icon: project
+date: 2017-07-30
+icon: location
 ---
-
-Couple of beautiful days spent on this wonderful beach
