@@ -37,16 +37,12 @@ layout: default
       <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
     {% endif %}
 
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+    
 
     {% if paginator.next_page %}
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
       <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
     {% endif %}
   </nav>
   {% endif %}
-
-  {% if site.plugins contains "jekyll-feed" %}
-    <a href="{{ "/feed.xml" | relative_url }}"><span class="text-secondary">{% include icon-rss.svg %}</span></a>
-  {% endif %}
-
 </div>
