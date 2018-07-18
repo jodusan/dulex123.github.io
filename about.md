@@ -3,7 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-My name is slim shady and Im the real 
 
 <style>
 
