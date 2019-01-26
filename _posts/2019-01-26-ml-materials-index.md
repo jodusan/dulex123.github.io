@@ -9,6 +9,7 @@ summary: Introductory online courses, books, papers and implementations
 
 ___
 
+## Intro
 
 Courses:
  - [CS229 - Machine Learning, Coursera](https://www.coursera.org/learn/machine-learning)  
@@ -20,3 +21,11 @@ Books:
  - [The deep learning book](https://www.deeplearningbook.org/)
  - [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book.html)
 
+
+## Advanced topics
+
+Articles:
+ - [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+
+Specials:
+ - [Spinning up with RL](https://spinningup.openai.com/)
