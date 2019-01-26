@@ -16,7 +16,7 @@
 title: Dušan Josipović journal
 email: dusanix@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Ideas, projects and guides from a Computer Science graduate.
+  Machine learning ideas, projects and guides.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: josipovicd
