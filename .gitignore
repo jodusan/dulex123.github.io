@@ -2,6 +2,7 @@
 
 ### Jekyll ###
 _site/
+!_site/feed.xml
 .sass-cache/
 .jekyll-metadata
 
