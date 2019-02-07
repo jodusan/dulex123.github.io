@@ -27,6 +27,7 @@ Books:
 Articles:
  - [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
  - [Transformer - Attention is all you need](<http://jalammar.github.io/illustrated-transformer/>)
+ - [Advantage Actor Critic Fox](https://hackernoon.com/intuitive-rl-intro-to-advantage-actor-critic-a2c-4ff545978752)
 
 Specials:
  - [Spinning up with RL](https://spinningup.openai.com/)
