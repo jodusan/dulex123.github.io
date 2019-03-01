@@ -28,6 +28,9 @@ Articles:
  - [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
  - [Transformer - Attention is all you need](<http://jalammar.github.io/illustrated-transformer/>)
  - [Advantage Actor Critic Fox](https://hackernoon.com/intuitive-rl-intro-to-advantage-actor-critic-a2c-4ff545978752)
+ - [Pytorch Internals](<https://speakerdeck.com/perone/pytorch-under-the-hood>)
+ - [Gradient clipping](<https://stackoverflow.com/questions/44796793/difference-between-tf-clip-by-value-and-tf-clip-by-global-norm-for-rnns-and-how>)
+ - [RL Debugging](<http://rll.berkeley.edu/deeprlcourse/docs/nuts-and-bolts.pdf>)
 
 Specials:
  - [Spinning up with RL](https://spinningup.openai.com/)
