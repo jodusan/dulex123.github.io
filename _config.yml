@@ -44,6 +44,7 @@ header_pages:
 - about.md
 - contact.md
 - posts.md
+- subscribe.md
 
 footer_icons:
 - username: dulex123
