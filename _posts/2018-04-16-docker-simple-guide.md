@@ -158,7 +158,7 @@ useful docker commands which can help your docker-fu.
   sudo apt-get install libopenjpeg5
   ~~~
 
-# Links
+## Links
 
 [Awesome][docker-lowlevel] intro on how docker works.
 
