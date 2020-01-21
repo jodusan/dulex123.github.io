@@ -26,6 +26,7 @@ Books:
 
 Articles:
  - [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+ - [Intuition and Use-cases of Embeddings in NLP & beyond](https://www.infoq.com/presentations/nlp-word-embedding/)
  - [Transformer - Attention is all you need](<http://jalammar.github.io/illustrated-transformer/>)
  - [Advantage Actor Critic Fox](https://hackernoon.com/intuitive-rl-intro-to-advantage-actor-critic-a2c-4ff545978752)
  - [Pytorch Internals](<https://speakerdeck.com/perone/pytorch-under-the-hood>)
