@@ -2,4 +2,6 @@
 Online journal
 
 
+
+
 sudo apt-get install ruby-dev ruby
