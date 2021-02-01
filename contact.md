@@ -5,12 +5,23 @@ permalink: /contact/
 ---
 <div>
 
-<form class="wj-contact" action="https://formspree.io/{{site.email}}" method="POST">
-    <input type="text" name="email" placeholder="Email Address">
-    <textarea type="text" name="content" rows="10" placeholder="Message"></textarea>
-    <input type="hidden" name="_next" value="/received">
-    <input type="hidden" name="_subject" value="New Contact Form Submission">
-    <input type="text" name="_gotcha" style="display:none">
-    <input type="submit" value="Submit">
-</form>
+
+
+<form
+  action="https://formspree.io/f/xnqorjjq"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="text" name="_replyto">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+
+  <!-- your other form fields go here -->
+
+  <button type="submit">Send</button>
+</form
 </div>
