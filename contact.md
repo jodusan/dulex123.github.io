@@ -7,17 +7,14 @@ permalink: /contact/
 
 
 
-<form
-  action="https://formspree.io/f/xnqorjjq"
-  method="POST"
->
+<form class="wj-contact" action="https://formspree.io/f/xnqorjjq" method="POST">
   <label>
     Your email:
-    <input type="text" name="_replyto">
+    <input type="text" name="_replyto" placeholder="Email Address">
   </label>
   <label>
     Your message:
-    <textarea name="message"></textarea>
+    <textarea rows="10" name="message" placeholder="Message"></textarea>
   </label>
 
   <!-- your other form fields go here -->
