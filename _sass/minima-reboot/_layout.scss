@@ -1,0 +1,109 @@
+$layout-color-border: #e9ecef !default;
+$layout-color-background: #fdfdfd !default;
+$layout-color-syntax-highlighting-background: #f8f9fa !default;
+
+body {
+  background-color: $layout-color-background;
+}
+html {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+//body::-webkit-scrollbar {
+//  display: none;
+//}
+//
+///* Hide scrollbar for IE, Edge and Firefox */
+//body {
+//  -ms-overflow-style: none;  /* IE and Edge */
+//  scrollbar-width: none;  /* Firefox */
+//}
+
+#nav-header {
+  border-top: 5px solid !important;
+  border-bottom: 1px solid $layout-color-border !important;
+}
+
+#nav-container {
+  height: 3.5rem;
+}
+
+#nav-menu-container {
+  position: absolute;
+  z-index: 100;
+  top: 0.4375rem;
+  right: 1rem;
+  border: 1px solid $layout-color-border;
+  border-radius: .25rem;
+  background-color: $layout-color-background;
+}
+
+#nav-trigger-label {
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+#nav-trigger:checked ~ #nav-menu {
+  display: block !important;
+}
+
+#content {
+  h1, h2, h3, h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  blockquote {
+    border-left: 4px solid $layout-color-border;
+    padding-left: 1rem;
+    font-style: italic
+  }
+  .footnotes {
+    text-align: left;
+  }
+}
+
+#site-footer {
+  border-top: 1px solid $layout-color-border;
+}
+
+.highlight pre {
+  border: 1px solid $layout-color-border;
+  border-radius: .25rem;
+  background-color: $layout-color-syntax-highlighting-background;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+}
+
+form.wj-contact {
+  padding:20px;
+}
+
+form.wj-contact input[type="text"], form.wj-contact textarea[type="text"] {
+    width: 100%;
+    vertical-align: middle;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+    padding: 0.75em;
+    font-family: monospace, sans-serif;
+    font-weight: lighter;
+    border-style: solid;
+    border-color: #444;
+    outline-color: #2e83e6;
+    border-width: 1px;
+    border-radius: 3px;
+    transition: box-shadow .2s ease;
+}
+form.wj-contact input[type="submit"] {
+    outline: none;
+    cursor:pointer;
+    color: white;
+    background-color: #2e83e6;
+    border-radius: 3px;
+    padding: 0.5em;
+    margin: 0.25em 0 0 0;
+    border: 1px solid transparent;
+    height: auto;
+}
